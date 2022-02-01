@@ -8,7 +8,7 @@ app.use(express.json());
 
 app.use("/bookmarks", bookmarksController);
 
-app.get("/", () => {
+app.get("/", (_, response) => {
   console.log("GET request to /");
   response.send("Hello and welcome to bookmarks!");
 });
